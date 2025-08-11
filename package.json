@@ -1,0 +1,23 @@
+{
+  "name": "k8s-4-memory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && tsconfig-replace-paths -p tsconfig.build.json",
+    "start": "node build/src/index.js",
+    "start:local": "npm run build && npm run start",
+    "test": "jest --config jest.config.js --coverage",
+    "check": "npm run build && npm run test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "ts-node": "^10.9.2",
+    "tsconfig-replace-paths": "^0.0.14",
+    "typescript": "^5.9.2"
+  }
+}
